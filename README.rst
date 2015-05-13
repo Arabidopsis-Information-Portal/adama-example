@@ -27,7 +27,12 @@ Access the notebook at:
 
 - Mac or Windows: ``http://$(boot2docker ip):8888``
 
+The notebook can also be `displayed read-only`_ with no installation,
+thanks to the `great work of Github team`_.
+
 
 .. _Docker: http://docker.com
 .. _these instructions: https://docs.docker.com/installation/#installation
 .. _these other instructions: https://docs.docker.com/compose/install/#install-compose
+.. _displayed read-only: https://github.com/waltermoreira/adama-example/blob/master/notebooks/Example.ipynb
+.. _great work of Github team: https://github.com/blog/1995-github-jupyter-notebooks-3
