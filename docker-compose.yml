@@ -8,5 +8,6 @@ example:
     PASSWORD: adama
     USE_HTTP: 1
   volumes:
+    - notebooks:/notebooks
     - .:/notebooks/local
     - service:/service
