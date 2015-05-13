@@ -52,7 +52,7 @@ endpoints:
           - 9
           - 10
   /list:
-    parameters:
+    parameters: []
 
 # provenance information
 sources:
