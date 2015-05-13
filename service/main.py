@@ -15,8 +15,12 @@ def search(args):
                                     'model': model})
     response.raise_for_status()
 
-    data = response.json()['abundance_data']
-    for row in data:
+    try:
+        json_data = response.json()
+    except ValueError:
+        raise Exception(response.text)
+
+    for row in json_data['abundance_data']:
         print json.dumps(row)
         print '---'
 
