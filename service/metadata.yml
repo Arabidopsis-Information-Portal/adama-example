@@ -1,0 +1,68 @@
+---
+
+name: smallrna
+version: 0.1
+description: List of gene/IGR-specific reads and expression data
+
+# authors of this service in Adama
+# see provenance information below
+authors:
+  - name: Walter Moreira
+    email: wmoreira@tacc.utexas.edu
+    sponsor_organization_name: The University of Texas at Austin
+    sponsor_uri: http://utexas.edu
+
+# type of service
+type: query
+main_module: service/main.py
+
+icon: logo.png
+
+# domains the service will access to get the data
+whitelist:
+  - mpss.udel.edu
+
+# allow Adama to validate parameters before sending them to the
+# service
+validate_request: true
+
+# document the parameters for the endpoints
+endpoints:
+  /search:
+    parameters:
+      - name: gene
+        description:
+        type: string
+        required: true
+        default: AT1G01010
+      - name: model
+        description:
+        type: string
+        required: false
+        default: 1
+        enum:
+          - 1
+          - 2
+          - 3
+          - 4
+          - 5
+          - 6
+          - 7
+          - 8
+          - 9
+          - 10
+  /list:
+    parameters:
+
+# provenance information
+sources:
+  - title: Small RNA database
+    description: Arabidopsis Small RNA JSON Web Services at Meyers Lab
+    language: en-us
+    last_modified: 2013-06-16T00:00:00
+    sponsor_organization_name: University of Delaware
+    sponsor_uri: http://www.udel.edu
+    provider_name: Blake Meyers
+    provider_email: meyers@dbi.udel.edu
+    uri: https://mpss.udel.edu/dbs/index.php?SITE=at_sRNA
+    license: non-commercial
